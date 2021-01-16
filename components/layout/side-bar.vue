@@ -21,7 +21,7 @@ export default {
 .side-bar {
   padding-left: 20px;
   height: 100%;
-  width: 160px;
+  width: 150px;
   position: fixed;
   z-index: 1;
   top: 0;
