@@ -39,9 +39,7 @@ body {
 }
 
 .main-content {
-  margin-left: 160px;
-  font-size: 28px;
-  padding: 0px 10px;
+
 }
 
 @media screen and (max-height: 450px) {
