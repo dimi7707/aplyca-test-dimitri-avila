@@ -39,80 +39,12 @@ export const actions: ActionTree<State, RootState> = {
       commit('SET_ERROR', error, { root: true });
     }
   },
-  /*async fetchDepartmentsByCountry({ commit }, data) {
+  async fetchToDoByUser({ commit }, data) {
     try {
-      const departmentList = (await axios.get(`${process.env.apiUrl}state/show_by_country/${data.countryId}`)).data;
-      commit('SET_DEPARTMENTS', departmentList);
-
+      const toDoList = (await axios.get(`${process.env.apiUrl}/todos?userId=${data.userId}`)).data;
+      return toDoList;
     } catch (error) {
       commit('SET_ERROR', error, { root: true });
     }
-  },
-  async fetchMunicipalitiesByDepartment({ commit }, data) {
-    try {
-      const municipalityList = (await axios.get(`${process.env.apiUrl}city/show_by_state/${data.stateId}`)).data;
-      commit('SET_MUNICIPALITIES', municipalityList);
-    } catch (error) {
-      commit('SET_ERROR', error, { root: true });
-    }
-  },
-  async signup({ commit }, data) {
-    let config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
-        "Access-Control-Allow-Credentials": "true"
-      }
-    };
-    try {
-      const signupResponse = await axios.post(
-        `${process.env.apiUrl}client/signup`,
-        {
-          name: data.name,
-	        last_name: data.lastName,
-	        email: data.email,
-	        birth_date: data.birthDate,
-	        password: data.password,
-	        password_confirmation: data.confirmationPassword,
-	        phone: data.phoneNumber,
-	        subscribe: data.suscribe,
-	        gender_id: data.gender,
-	        type_user_id: 1,
-	        address: data.address,
-	        city_id: data.cityId
-        },
-        config
-      );
-
-      return signupResponse.data;
-    } catch (error) {
-      commit('SET_ERROR', error, { root: true });
-    }
-  },
-  async singIn({ commit }, data){
-    let config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
-        "Access-Control-Allow-Credentials": "true"
-      }
-    };
-    try {
-      const loginResponse = await axios.post(
-        `${process.env.apiUrl}/client/login`,
-        {
-          email: data.email,
-          password: data.password
-        },
-        config
-      );
-      return loginResponse.data;
-    } catch (error) {
-      commit('SET_ERROR', error, { root: true });
-    }
-  } */
+  }
 };

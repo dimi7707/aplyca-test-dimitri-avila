@@ -29,7 +29,6 @@ export default {
   methods: {
     async getUsers() {
       const users = await this.$store.dispatch('user/fetchUsers');
-      console.log(users);
       this.users = users;
     }
   },

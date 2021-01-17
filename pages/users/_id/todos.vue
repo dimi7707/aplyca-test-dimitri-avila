@@ -6,8 +6,16 @@
 
 <script>
 export default {
-  mounted() {
-    console.log(this.$route.params.id);
+  created() {
+    this.getToDosByUser();
   },
+  methods: {
+    async getToDosByUser(){
+      const userId = this.$route.params.id;
+      const todoList = await this.$store.dispatch('user/fetchToDoByUser', { userId: userId });
+      console.log(todoList);
+    }
+  },
+
 }
 </script>
