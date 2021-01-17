@@ -2,11 +2,11 @@
   <div class="top-nav">
     <div class="menu-options">
       <img src="~/assets/images/menu-left.svg" alt="menu-symbol">
-      <a class="active" href="#home">Dashboard</a>
+      <a href="#home">Dashboard</a>
     </div>
     <div class="user-profile">
       <img src="~/assets/images/generic-user-image.svg" alt="">
-      <span>Marlene Sasoeur</span>
+      <span class="user-name">Marlene Sasoeur</span>
     </div>
   </div>
 </template>
@@ -27,11 +27,18 @@
 
   a {
     float: left;
-    color: $black;
+    color: $grey-variant;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 14px;
+  }
+
+  .user-name {
+    color: $grey-variant;
+    font-size: 14px;
+    margin-left: 1em;
+
   }
 }
 </style>

@@ -7,7 +7,6 @@
       </button>
     </div>
     <users-table :users="users" />
-
   </div>
 </template>
 

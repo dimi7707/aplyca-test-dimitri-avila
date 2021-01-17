@@ -4,7 +4,7 @@
     <table class="table" cellspacing="0" cellpadding="0">
       <thead>
         <tr>
-          <th>ID</th>
+          <th width="5%">ID</th>
           <th>Name</th>
           <th>Username</th>
           <th>Email</th>
@@ -57,20 +57,27 @@ export default {
   padding: 20px;
 }
 
+h3 {
+  font-size: 15px;
+  color: $black-for-titles;
+}
+
 .table {
   width: 100%;
+  text-align: left;
 
   thead {
     th {
-      text-align: left;
       color: $grey-table-header;
-      padding-bottom: 1em;
       padding-top: 1em;
+      padding-bottom: 1em;
+      font-size: 14px;
     }
   }
 
   tbody {
     color: $color-body-table;
+    font-size: 14px;
 
     a {
       color: $color-link;
@@ -81,9 +88,8 @@ export default {
     }
 
     td {
-      text-align: left;
-      padding-bottom: 1em;
-      padding-top: 1em;
+      padding-bottom: 2em;
+      padding-top: 2em;
       margin-left: 0;
       margin-right: 0;
     }
