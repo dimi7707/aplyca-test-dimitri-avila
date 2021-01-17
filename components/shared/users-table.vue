@@ -1,6 +1,9 @@
 <template>
   <div class="users-table">
-    <h3>Users</h3>
+    <div class="title-table-section">
+      <h3>Users</h3>
+      <img src="~/assets/images/menu-dots.svg" alt="">
+    </div>
     <table class="table" cellspacing="0" cellpadding="0">
       <thead>
         <tr>
@@ -35,8 +38,6 @@
 </template>
 
 <script>
-
-
 export default {
   props: {
     users: Array
@@ -55,6 +56,15 @@ export default {
 .users-table {
   background-color: $white;
   padding: 20px;
+}
+
+.title-table-section {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    margin-right: 1em;
+  }
 }
 
 h3 {

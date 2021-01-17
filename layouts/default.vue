@@ -33,11 +33,11 @@ body {
 
 .right-side {
   margin-left: 3em;
-  margin-right: 3em;
+  margin-right: 1em;
   position: absolute;
   top: 0;
   left: 150px;
-  width: 80%;
+  width: 83%;
 }
 
 @media screen and (max-height: 450px) {
