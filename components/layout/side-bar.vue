@@ -4,7 +4,7 @@
     <ul>
       <li>
         <img src="~assets/images/user-icon.svg" alt="">
-        <a href="#about">Users</a>
+        <a href="/">Users</a>
       </li>
     </ul>
   </div>
@@ -18,6 +18,7 @@ export default {
 
 <style lang="scss">
 @import '~/assets/styles/variables.scss';
+
 .side-bar {
   padding-left: 20px;
   height: 100%;
@@ -37,7 +38,7 @@ export default {
       list-style: none;
 
       a {
-        margin-left: 0;
+        margin-left: .3em;
         text-decoration: none;
         color: $black;
       }

@@ -10,6 +10,7 @@
           <th>Email</th>
           <th>Address</th>
           <th>Company</th>
+          <th>Options</th>
         </tr>
       </thead>
       <tbody>
@@ -22,6 +23,11 @@
             v-html="user.address.street + ' ' + user.address.suite + ' ' + user.address.city"
           />
           <td v-html="user.company.name" />
+          <td>
+            <a :href="`users/${user.id}/todos`">
+              View todos
+            </a>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -65,6 +71,10 @@ export default {
 
   tbody {
     color: $color-body-table;
+
+    a {
+      color: $color-link;
+    }
 
     tr:nth-child(even) {
       background-color: $soft-grey-table;
