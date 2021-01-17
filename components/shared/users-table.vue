@@ -13,29 +13,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-        </tr>
-        <tr>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-        </tr>
-        <tr>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
-          <td>probado</td>
+        <tr v-for="user in users" :key="user.userId">
+          <td v-html="user.id" />
+          <td v-html="user.name" />
+          <td v-html="user.username" />
+          <td v-html="user.email" />
+          <td
+            v-html="user.address.street + ' ' + user.address.suite + ' ' + user.address.city"
+          />
+          <td v-html="user.company.name" />
         </tr>
       </tbody>
     </table>
@@ -43,8 +29,17 @@
 </template>
 
 <script>
-export default {
 
+
+export default {
+  props: {
+    users: Array
+  },
+  data() {
+    return {
+
+    }
+  }
 }
 </script>
 
