@@ -26,9 +26,5 @@ export const actions: ActionTree<State, State> = {
   },
   flushMessage({ commit }) {
     commit('SET_MESSAGE', null);
-  },
-  goTo(_object, route) {
-    const path = this.app.localePath(route);
-    this.$router.push(path);
   }
 };

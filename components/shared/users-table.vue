@@ -27,7 +27,7 @@
           />
           <td v-html="user.company.name" />
           <td>
-            <a :href="`users/${user.id}/todos`">
+            <a :href="`users/${user.id}/todos`" @click="saveNameOnState(user.name)">
               View todos
             </a>
           </td>
@@ -44,9 +44,14 @@ export default {
   },
   data() {
     return {
-
+      // ...
     }
-  }
+  },
+  methods: {
+    saveNameOnState(name) {
+      localStorage.setItem('currentUser', name);
+    }
+  },
 }
 </script>
 

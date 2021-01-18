@@ -17,8 +17,8 @@
 <script>
 export default {
   props: {
-    assigned: String,
     title: String,
+    assigned: String,
     completed: Boolean
   }
 }

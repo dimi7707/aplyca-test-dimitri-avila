@@ -59,4 +59,8 @@ export default {
   }
 }
 
+.btn-add-user:focus  {
+  outline: none;
+}
+
 </style>

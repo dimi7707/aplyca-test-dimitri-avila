@@ -4,7 +4,7 @@
       <todo-card
         v-for="task in todoList"
         :key="task.id"
-        assigned="Prueba"
+        :assigned="currentUser"
         :title="task.title"
         :completed="task.completed"
         class="mt-2 mb-2"
@@ -21,11 +21,15 @@ export default {
   },
   data() {
     return {
-      todoList: []
+      todoList: [],
+      currentUser: ''
     }
   },
   created() {
     this.getToDosByUser();
+  },
+  mounted() {
+    this.currentUser = localStorage.getItem('currentUser');
   },
   methods: {
     async getToDosByUser(){
